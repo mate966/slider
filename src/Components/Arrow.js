@@ -1,10 +1,10 @@
 import arrow from "../assets/arrow.png";
 
-export const Arrow = ({ className }) => {
+export const Arrow = ({ className, setCurrentSlide }) => {
     const handleSlideChange = className => {
-        className === "arrow arrow--left"
-            ? console.log("siema")
-            : console.log("nara");
+        return className === "arrow arrow--left"
+            ? setCurrentSlide(prev => prev - 1)
+            : setCurrentSlide(prev => prev + 1);
     };
 
     return (

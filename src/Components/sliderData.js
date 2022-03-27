@@ -15,7 +15,6 @@ export const GetData = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        console.log(isLoading);
         let requests = urls.map(url =>
             fetch(`https://api.github.com/users/${url.split("/")[4]}`)
         );
